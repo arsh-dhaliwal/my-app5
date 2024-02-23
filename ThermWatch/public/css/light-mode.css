@@ -1,0 +1,185 @@
+/* Light Mode Styles for ThermWatch */
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Top navigation bar */
+.top-nav {
+  background-color: #e7e7e7;
+  color: #333;
+}
+
+.top-nav .logo {
+  float: left;
+  margin-left: 10px;
+}
+
+.top-nav .app-name {
+  float: left;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.top-nav .customer-name {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+/* Left navigation bar */
+.left-nav {
+  background-color: #f2f2f2;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.left-nav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  display: block;
+}
+
+.left-nav a:hover {
+  background-color: #ddd;
+}
+
+/* Dashboard cards */
+.dashboard-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Status colors */
+.status-green {
+  color: #4CAF50;
+}
+
+.status-yellow {
+  color: #FFEB3B;
+}
+
+.status-red {
+  color: #F44336;
+}
+
+/* Charts */
+.chart-container {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Settings popup */
+.settings-popup {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  padding: 20px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.settings-popup .tab-content {
+  margin-top: 10px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Toggle buttons for dark/light mode */
+#toggleDarkMode,
+#toggleLightMode {
+  float: right;
+  margin-right: 10px;
+}
+
+/* Demo mode button */
+#demoMode {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* General form styles */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 20px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Alarm status card colors */
+.card-alarm-status {
+  transition: background-color 0.3s ease;
+}
+
+.card-alarm-status.green {
+  background-color: #e8f5e9; /* Light green background */
+}
+
+.card-alarm-status.yellow {
+  background-color: #fffde7; /* Light yellow background */
+}
+
+.card-alarm-status.red {
+  background-color: #ffebee; /* Light red background */
+}
+
+/* Responsive layout adjustments */
+@media screen and (max-width: 600px) {
+  .left-nav,
+  .top-nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .left-nav a {
+    float: left;
+    display: block;
+    text-align: left;
+  }
+
+  .left-nav a:not(:first-child) {
+    display: none;
+  }
+
+  .left-nav a.icon {
+    float: right;
+    display: block;
+  }
+}

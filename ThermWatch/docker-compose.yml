@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  thermwatch-app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm start
+
+  thermwatch-db:
+    image: nouchka/sqlite3
+    volumes:
+      - ./db:/db
+    environment:
+      - SQLITE_DATABASE=db.sqlite
+    command: sqlite3 /db/db.sqlite
+
+networks:
+  default:
+    external:
+      name: thermwatch-network

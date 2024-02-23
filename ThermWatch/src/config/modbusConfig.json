@@ -1,0 +1,37 @@
+{
+  "modbus": {
+    "connectionType": "tcp",
+    "tcp": {
+      "host": "PLC_HOST_IP_ADDRESS",
+      "port": 502,
+      "timeout": 5000,
+      "reconnectTimeout": 10000,
+      "unitId": 1
+    },
+    "rtu": {
+      "serialPort": "/dev/ttyUSB0",
+      "baudRate": 9600,
+      "parity": "none",
+      "dataBits": 8,
+      "stopBits": 1,
+      "timeout": 1000
+    },
+    "pollingInterval": 1000,
+    "retryTimeout": 3000,
+    "devices": [
+      {
+        "id": "sensor_1",
+        "address": 0,
+        "length": 2,
+        "type": "holdingRegister"
+      },
+      {
+        "id": "sensor_2",
+        "address": 2,
+        "length": 2,
+        "type": "holdingRegister"
+      }
+      // Add additional sensor configurations as needed
+    ]
+  }
+}

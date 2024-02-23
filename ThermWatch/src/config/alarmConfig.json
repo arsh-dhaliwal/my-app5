@@ -1,0 +1,17 @@
+{
+  "yellowAlert": {
+    "percentageIncrease": 10,
+    "daysSpan": 7,
+    "statusColor": "yellow",
+    "description": "Alert if there is an increase by X% in average temperature trend for any sensor over the last Y days."
+  },
+  "redAlert": {
+    "temperatureThreshold": 75,
+    "statusColor": "red",
+    "description": "Alert if temperature for any sensor meets or exceeds the threshold."
+  },
+  "normalStatus": {
+    "statusColor": "green",
+    "description": "Status indicating everything is good."
+  }
+}

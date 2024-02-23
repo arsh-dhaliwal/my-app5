@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="thermWatchApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThermWatch</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link id="theme-style" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/daqConfig.js"></script>
+    <script src="js/alerts.js"></script>
+    <script src="js/demoMode.js"></script>
+    <script src="js/charts.js"></script>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="ThermWatch Logo">
+                <span>ThermWatch</span>
+            </div>
+            <div class="customer-name">
+                <!-- Customer name will be dynamically inserted here -->
+            </div>
+            <div class="plant-asset-selector">
+                <!-- Plant and Asset selection dropdowns will be dynamically inserted here -->
+            </div>
+        </div>
+    </header>
+    <aside class="navigation-bar">
+        <ul>
+            <li ng-click="navigateTo('dashboard')">Dashboard</li>
+            <li ng-click="navigateTo('appConfigurations')">App configurations</li>
+            <li ng-click="navigateTo('daqConfiguration')">DAQ configuration</li>
+            <li ng-click="navigateTo('alertsAlarms')">Alerts and alarms</li>
+            <li ng-click="toggleDemoMode()">Demo mode</li>
+        </ul>
+    </aside>
+    <main ng-view>
+        <!-- AngularJS will inject pages here based on routing -->
+    </main>
+    <footer>
+        <button id="toggleDarkMode" ng-click="toggleTheme('dark')">Dark Mode</button>
+        <button id="toggleLightMode" ng-click="toggleTheme('light')">Light Mode</button>
+    </footer>
+    <script>
+        // Initial theme setup
+        document.getElementById('theme-style').setAttribute('href', 'css/light-mode.css');
+    </script>
+</body>
+</html>

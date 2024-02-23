@@ -1,0 +1,46 @@
+{
+  "demoCompanyProfile": {
+    "companyName": "Demo Company",
+    "address": "123 Demo Street",
+    "city": "Demo City",
+    "stateProvince": "Demo State",
+    "country": "DemoLand",
+    "zipPostalCode": "12345",
+    "phoneNumber": "123-456-7890",
+    "email": "demo@company.com"
+  },
+  "demoPlantProfiles": [
+    {
+      "plantName": "Demo Plant 1",
+      "address": "456 Plant Lane",
+      "city": "Industryville",
+      "stateProvince": "Manufactura",
+      "country": "DemoLand",
+      "zipPostalCode": "67890",
+      "phoneNumber": "098-765-4321",
+      "email": "plant1@company.com"
+    }
+  ],
+  "demoAssetProfiles": [
+    {
+      "assetName": "Demo Asset 1",
+      "plant": "Demo Plant 1",
+      "capacity": "1000",
+      "rating": "A",
+      "temperatureThreshold": "100"
+    }
+  ],
+  "demoSensorProfiles": [
+    {
+      "sensorName": "Demo Sensor 1",
+      "sensorFamily": "ThermoX",
+      "sensorType": "Temperature",
+      "sensorVariant": "TX1000",
+      "asset": "Demo Asset 1",
+      "position": "1"
+    }
+  ],
+  "historicDataStartYear": 2018,
+  "realTimeDataGenerationInterval": 5000,
+  "temperatureUnit": "Celsius"
+}

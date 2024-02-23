@@ -1,0 +1,19 @@
+{
+  "brokerUrl": "mqtt://localhost",
+  "port": 1883,
+  "topic": "ThermWatch/sensors/temperature",
+  "clientId": "ThermWatch_DAQ_Client",
+  "username": "thermwatch_user",
+  "password": "securepassword",
+  "qos": 1,
+  "retain": false,
+  "cleanSession": true,
+  "reconnectPeriod": 1000,
+  "connectTimeout": 30 * 1000,
+  "will": {
+    "topic": "ThermWatch/status",
+    "payload": "ThermWatch DAQ Client Disconnected",
+    "qos": 1,
+    "retain": false
+  }
+}

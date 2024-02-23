@@ -1,0 +1,13 @@
+{
+  "service": "smtp",
+  "auth": {
+    "user": "your-email@example.com",
+    "pass": "your-password"
+  },
+  "from": "ThermWatch Alert <alerts@thermwatch.example.com>",
+  "subject": "Temperature Alert",
+  "body": {
+    "alarm": "Warning: Temperature threshold exceeded for sensor: {{sensorName}} at asset: {{assetName}} in plant: {{plantName}}.",
+    "warning": "Attention: Temperature trend increasing for sensor: {{sensorName}}. Please review the data."
+  }
+}
